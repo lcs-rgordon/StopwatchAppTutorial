@@ -17,6 +17,9 @@ struct ContentView: View {
             
             // Second layer (rest of interface)
             VStack {
+                
+                Spacer()
+                
                 Text("00:09.96")
                     .font(Font.system(size: 90, weight: .thin))
                     .foregroundColor(.white)
@@ -33,6 +36,18 @@ struct ContentView: View {
                                      label: "Start",
                                      labelColor: .green)
                 }
+                
+                // List of times
+                List {
+                    Text("1")
+                    Text("2")
+                    Text("3")
+                    Text("4")
+                    Text("5")
+                }
+                // Set the amount of vertical height we want this list to take up
+                .frame(height: 300)
+
             }
             .padding()
         }
@@ -56,21 +71,21 @@ struct ContentView_Previews: PreviewProvider {
                     Text("Alarm")
                 }
                 .tag(2)
-
+            
             ContentView()
                 .tabItem {
                     Image(systemName: "stopwatch.fill")
                     Text("Stopwatch")
                 }
                 .tag(3)
-
+            
             Text("Timer")
                 .tabItem {
                     Image(systemName: "timer")
                     Text("Timer")
                 }
                 .tag(4)
-
+            
         }
         // Change the accent color for the currently active tab item
         .accentColor(.orange)
