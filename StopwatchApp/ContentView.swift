@@ -23,13 +23,13 @@ struct ContentView: View {
                 
                 // Create a circular button
                 HStack {
-                    CircleButtonView(buttonColor: .gray,
+                    CircleButtonView(buttonColor: Color("Dark Grey"),
                                      label: "Reset",
                                      labelColor: .white)
 
                     Spacer()
                     
-                    CircleButtonView(buttonColor: .brown,
+                    CircleButtonView(buttonColor: Color("Dark Green"),
                                      label: "Start",
                                      labelColor: .green)
                 }
